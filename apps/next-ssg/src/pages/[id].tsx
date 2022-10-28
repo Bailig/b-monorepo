@@ -1,4 +1,4 @@
-import { fetchAppConfig } from "../api";
+import { AppConfig, fetchAppConfig } from "../api";
 import { Home } from "../client/home";
 
 export async function getStaticPaths() {
@@ -17,7 +17,7 @@ export async function getStaticProps(context: any) {
   };
 }
 
-export default function Post({ app }: { app: App }) {
+export default function Post({ app }: { app: AppConfig }) {
   return (
     <>
       id: {app.id} <br /> name: {app.name}
