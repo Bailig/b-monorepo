@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { fetchAppConfig } from "../api";
-import { App } from "../api/app-config";
+import { AppConfig } from "../api/app-config";
 
 export async function getStaticProps() {
   const apps = await fetchAppConfig();
@@ -9,7 +9,7 @@ export async function getStaticProps() {
   };
 }
 
-export default function Apps({ apps }: { apps: App[] }) {
+export default function Apps({ apps }: { apps: AppConfig[] }) {
   return (
     <div>
       <h1>Apps</h1>
