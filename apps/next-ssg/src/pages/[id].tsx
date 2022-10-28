@@ -1,16 +1,5 @@
+import { fetchAppConfig } from "../api";
 import { Home } from "../client/home";
-
-interface App {
-  id: string;
-  name: string;
-}
-
-const fetchAppConfig = async (): Promise<App[]> => {
-  const res = await fetch(
-    "https://raw.githubusercontent.com/Bailig/b-monorepo/main/apps/next-ssg/data/app-configs.json"
-  );
-  return await res.json();
-};
 
 export async function getStaticPaths() {
   const apps = await fetchAppConfig();
