@@ -13,7 +13,8 @@ export const Home = () => {
     )
       .then((res) => res.json())
       .then((data: Data) => setData(data));
-  });
+  }, []);
+
   if (!data) {
     return <>Loading...</>;
   }
