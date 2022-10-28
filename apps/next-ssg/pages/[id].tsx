@@ -1,3 +1,5 @@
+import { Home } from "../client/home";
+
 interface App {
   id: string;
   name: string;
@@ -5,7 +7,7 @@ interface App {
 
 const fetchAppConfig = async (): Promise<App[]> => {
   const res = await fetch(
-    "https://raw.githubusercontent.com/Bailig/b-monorepo/main/apps/docs/data/app-configs.json"
+    "https://raw.githubusercontent.com/Bailig/b-monorepo/main/apps/next-ssg/data/app-configs.json"
   );
   return await res.json();
 };
@@ -30,6 +32,7 @@ export default function Post({ app }: { app: App }) {
   return (
     <>
       id: {app.id} <br /> name: {app.name}
+      <Home />
     </>
   );
 }
