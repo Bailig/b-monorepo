@@ -13,10 +13,6 @@ coverage
 out/
 build
 
-# astro
-dist/
-.output/
-
 # misc
 .DS_Store
 *.pem
@@ -35,5 +31,3 @@ yarn-error.log*
 
 # turbo
 .turbo
-
-.vscode
